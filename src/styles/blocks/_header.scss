@@ -12,10 +12,7 @@
         display: flex;
         column-gap: rem(40);
 
-        &:not(.is-active) {
-            @include hide;
-        }
-
+        
         &.is-bottom {
             @include mobile {
                 flex-direction: column;
@@ -23,6 +20,11 @@
                 align-items: center;
                 column-gap: 0;
                 row-gap: rem(30);
+                margin-bottom: rem(26);
+
+                &:not(.is-active) {
+                    display: none;
+                }
             }
         }
     }

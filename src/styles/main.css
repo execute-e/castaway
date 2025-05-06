@@ -312,10 +312,6 @@ svg * {
   display: flex;
   column-gap: 2.5rem;
 }
-.header__list:not(.is-active) {
-  opacity: 0;
-  visibility: hidden;
-}
 @media (width <= 47.99875rem) {
   .header__list.is-bottom {
     flex-direction: column;
@@ -323,6 +319,10 @@ svg * {
     align-items: center;
     column-gap: 0;
     row-gap: 1.875rem;
+    margin-bottom: 1.625rem;
+  }
+  .header__list.is-bottom:not(.is-active) {
+    display: none;
   }
 }
 .header__logo {
