@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.header {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-block: rem(26);
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: rem(40);
+
+        &:not(.is-active) {
+            @include hide;
+        }
+
+        &.is-bottom {
+            @include mobile {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0;
+                row-gap: rem(30);
+            }
+        }
+    }
+
+    &__logo {
+        width: fluid(160, 80);
+        flex-shrink: 0;
+    }
+
+    &__link {
+        &.is-active {
+            color: var(--color-accent);
+            pointer-events: none;
+        }
+    }
+}

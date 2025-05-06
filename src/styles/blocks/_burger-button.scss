@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.burger-button {
+    height: rem(40);
+    width: rem(40);
+    border: 2px solid var(--color-dark);
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: rem(10);
+    border-radius: 2px;
+    
+    @include hover {
+        border: 2px solid var(--color-accent);
+    }
+
+    &__line {
+        width: 80%;
+        height: rem(2);
+        background-color: var(--color-light);
+        border-radius: 2px;
+    }
+}
