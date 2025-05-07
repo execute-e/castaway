@@ -14,7 +14,7 @@
 
     &--left-top {
         &::after {
-            background: url(../../../public/icons/decoration.svg) no-repeat;
+            background: url(../../../../public/icons/decoration.svg) no-repeat;
             width: rem(68);
             height: rem(74);
             left: calc(var(--container-padding-x) - rem(26));

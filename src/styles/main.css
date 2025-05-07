@@ -586,7 +586,7 @@ svg * {
   }
 }
 .decoration--left-top::after {
-  background: url(../../../public/icons/decoration.svg) no-repeat;
+  background: url(../../../../public/icons/decoration.svg) no-repeat;
   width: 4.25rem;
   height: 4.625rem;
   left: calc(var(--container-padding-x) - 1.625rem);
