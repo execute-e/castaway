@@ -365,7 +365,7 @@ svg * {
 .underscored-text::after {
   content: "";
   position: absolute;
-  background: url(../../public/icons/underline.svg) no-repeat;
+  background: url(../../../castaway/public/icons/underline.svg) no-repeat;
   width: 100%;
   height: 0.6875rem;
   bottom: -0.3125rem;
@@ -518,7 +518,7 @@ svg * {
 }
 @media (width <= 63.9375rem) {
   .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../images/hero.png) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../../castaway/images/hero.png) no-repeat;
     background-size: cover;
     margin-top: 0;
   }
