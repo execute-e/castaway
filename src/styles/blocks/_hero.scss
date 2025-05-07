@@ -1,0 +1,65 @@
+@use '../helpers' as *;
+
+.hero {
+    display: flex;
+    column-gap: rem(60);
+    margin-top: rem(40);
+
+    @include tablet {
+        margin-top: rem(20);
+    }
+
+    @include tablet {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../../images/hero.png) no-repeat;
+        background-size: cover;
+        margin-top: 0;
+    }
+
+    @include mobile-s {
+        background-size: 100% auto;
+        background-position: center top;
+    }
+
+    &__image {
+        width: 600px;
+        height: 820px;
+
+        @include laptop-l {
+            width: rem(500);
+            height: rem(720);
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__title-block {
+        margin-top: rem(244);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(90);   
+        
+        @include tablet {
+            margin-top: 0;
+            padding-block: rem(244);
+        }
+
+        @include mobile-s {
+            padding-block: rem(40);
+            row-gap: rem(10);
+        }
+    }
+
+    &__soc1als {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+        margin-inline: rem(20);
+
+        &-icons {
+            display: flex;
+            column-gap: rem(17);
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use '../helpers' as *;
+
+.episode {
+    display: flex;
+    background-color: var(--color-dark);
+    padding: rem(40);
+    border-radius: rem(20);
+    column-gap: rem(53);
+
+    @include tablet {
+        padding: rem(30);
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(15);
+        padding: rem(10);
+    }
+
+    &__image {
+        width: rem(390);
+        height: rem(465);
+
+        @include tablet {
+            width: rem(290);
+            height: rem(365);
+        }
+
+        @include mobile {
+            width: rem(140);
+            height: rem(215);
+        }
+
+        
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        @include mobile {
+            align-items: center;
+            text-align: center;
+            row-gap: rem(10);
+        }
+    }
+
+    &__genre {
+        padding-inline: rem(16);
+        background-color: var(--background-color);
+        border-radius: rem(6);
+    }
+
+    &__number {
+        color: var(--color-accent);
+    }
+}

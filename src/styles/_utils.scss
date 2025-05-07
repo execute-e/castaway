@@ -21,3 +21,20 @@
         display: none !important;
     }
 }
+
+.bold-text {
+    font-weight: 700;
+}
+
+.underscored-text {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../../public/icons/underline.svg) no-repeat;
+        width: 100%;
+        height: rem(11);
+        bottom: rem(-5);
+        left: 0;
+    }
+}

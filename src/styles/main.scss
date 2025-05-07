@@ -4,5 +4,16 @@
 @use 'variables';
 @use 'fonts';
 
+@use 'blocks/btn';
+@use 'blocks/section';
 @use 'blocks/header';
 @use 'blocks/burger-button';
+@use 'blocks/hero';
+@use 'blocks/decoration';
+@use 'blocks/latest-episodes';
+@use 'blocks/episode';
+@use 'blocks/person';
+@use 'blocks/newsletter';
+@use 'blocks/reviews';
+@use 'blocks/review';
+@use 'blocks/footer';

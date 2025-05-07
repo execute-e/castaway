@@ -1,0 +1,34 @@
+@use '../helpers' as *;
+
+.decoration {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &--left-top {
+        &::after {
+            background: url(../../../icons/decoration.svg) no-repeat;
+            width: rem(68);
+            height: rem(74);
+            left: calc(var(--container-padding-x) - rem(26));
+            top: rem(-26);
+        }
+    }
+
+    &--left-bottom {
+        &::after {
+            background: url(../../../icons/decoration2.svg) no-repeat;
+            width: rem(147);
+            height: rem(91);
+            left: rem(-38);
+            bottom: rem(-26);
+        }
+    }
+}

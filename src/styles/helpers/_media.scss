@@ -1,18 +1,18 @@
 @use 'functions' as *;
 
-$laptop: 1440.98;
-$tablet: 1023.98;
-$mobile: 767.98;
-$mobile-s: 480.98;
+$laptop-l: 1439;
+$tablet: 1023;
+$mobile: 767;
+$mobile-s: 320;
 
-@mixin laptop {
-    @media (width <= rem($laptop)) {
+@mixin laptop-l {
+    @media (width <= rem($laptop-l)) {
         @content;
     }
 }
 
-@mixin laptop-above {
-    @media (width >= rem($laptop)) {
+@mixin laptop-l-above {
+    @media (width >= rem($laptop-l)) {
         @content;
     }
 }

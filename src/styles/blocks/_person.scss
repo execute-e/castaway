@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.person {
+    &__image {
+        width: rem(650);
+        height: rem(743);
+        
+        @include laptop-l {
+            width: rem(450);
+            height: rem(543);
+        }
+
+        @include tablet {
+            width: rem(250);
+            max-height: rem(343);
+        }
+
+        @include mobile {
+            width: rem(150);
+            max-height: rem(243);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: rem(60);
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(60);
+        }
+
+        @include mobile {
+            row-gap: rem(30);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(25);
+
+        @include tablet {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        color: var(--color-accent);
+    }
+
+    &__arrow-icon {
+        @include tablet {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.latest-episodes {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(60);
+    }
+}

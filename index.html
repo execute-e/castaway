@@ -1,79 +1,624 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="src/styles/main.css">
-    <script src="src/scripts/main.js" type="module"></script>
-  </head>
-  <body>
-    <header class="header" data-js-header>
-      <div class="header__inner container">
-        <div class="header__body">
-          <a href="/" class="header__logo">
-            <img src="images/logo.svg"
-              alt="Castaway"
-              class="header__logo-image"
-              height="33" width="160"
-            >
-            <span class="visually-hidden">Вернуться на главную</span>
-          </a>
-          <div class="header__menu">
-            <ul class="header__list hidden-mobile">
-              <li class="header__item">
-                <a href="/" class="header__link is-active">
-                  Home
-                </a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">
-                  Episodes
-                </a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">
-                  About
-                </a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <button class="btn header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu" title="Open menu" data-js-header-burger-button>
-              <span class="burger-button__line"></span>
-              <span class="burger-button__line"></span>
-              <span class="burger-button__line"></span>
-            </button>
-          </div>
-        </div>
-        <div class="header__bottom-menu">
-          <ul class="header__list visible-mobile is-bottom" data-js-header-overlay>
-            <li class="header__item">
-              <a href="/" class="header__link is-active">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="src/scripts/main.js" type="module"></script>
+</head>
+
+<body>
+  <header class="header" data-js-header role="banner">
+    <div class="header__inner container">
+      <div class="header__body">
+        <a href="/" class="header__logo">
+          <img src="images/logo.svg" alt="Castaway" class="header__logo-image" height="33" width="160">
+          <span class="visually-hidden">Вернуться на главную</span>
+        </a>
+        <nav class="header__menu" aria-label="Основная навигация">
+          <ul class="header__list hidden-mobile" role="menubar">
+            <li class="header__item" role="none">
+              <a href="/" class="header__link is-active" role="menuitem" aria-current="page">
                 Home
               </a>
             </li>
-            <li class="header__item">
-              <a href="/" class="header__link">
+            <li class="header__item" role="none">
+              <a href="/" class="header__link" role="menuitem">
                 Episodes
               </a>
             </li>
-            <li class="header__item">
-              <a href="/" class="header__link">
+            <li class="header__item" role="none">
+              <a href="/" class="header__link" role="menuitem">
                 About
               </a>
             </li>
-            <li class="header__item">
-              <a href="/" class="header__link">
+            <li class="header__item" role="none">
+              <a href="/" class="header__link" role="menuitem">
                 Contact
+              </a>
+            </li>
+          </ul>
+          <button class="header__burger-button 
+              burger-button visible-mobile" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobile-menu" title="Open menu" data-js-header-burger-button>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+        </nav>
+      </div>
+      <div class="header__bottom-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="header__list visible-mobile is-bottom" data-js-header-overlay role="menu">
+          <li class="header__item" role="none">
+            <a href="/" class="header__link is-active" role="menuitem" aria-current="page">
+              Home
+            </a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="/" class="header__link" role="menuitem">
+              Episodes
+            </a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="/" class="header__link" role="menuitem">
+              About
+            </a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="/" class="header__link" role="menuitem">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container decoration decoration--left-top" aria-labelledby="hero-title">
+      <img src="images/hero.png" alt="" class="hero__image" width="650" height="870">
+      <div class="hero__title-block">
+        <h1 class="hero__title" id="hero-title">Take your<br> podcast to the <span class="underscored-text"><span class="visually-hidden">highlighted </span>next</span> <span
+            class="bold-text">level</span></h1>
+        <div class="hero__soc1als">
+          <div class="hero__soc1als-title">
+            <p>Listen on</p>
+          </div>
+          <ul class="hero__soc1als-icons" role="list">
+            <li class="hero__soc1als-icons" role="listitem">
+              <a href="/" class="hero__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                <img src="icons/spotify.svg" alt="" class="hero__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li class="hero__soc1als-icons" role="listitem">
+              <a href="/" class="hero__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Pocket Casts">
+                <img src="icons/2.svg" alt="" class="hero__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li class="hero__soc1als-icons" role="listitem">
+              <a href="/" class="hero__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Soundcloud">
+                <img src="icons/soundcloud.svg" alt="" class="hero__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li class="hero__soc1als-icons" role="listitem">
+              <a href="/" class="hero__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts">
+                <img src="icons/4.svg" alt="" class="hero__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li class="hero__soc1als-icons" role="listitem">
+              <a href="/" class="hero__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Overcast">
+                <img src="icons/5.svg" alt="" class="hero__soc1als-icon" width="32" height="32">
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </header>
-  </body>
+    </section>
+    <section class="latest-episodes container section" aria-labelledby="latest-episodes-title">
+      <div class="section__header">
+        <h2 class="section__title" id="latest-episodes-title">Latest episodes</h2>
+        <a href="/" class="btn section__button">View all episodes</a>
+      </div>
+      <div class="section__body">
+        <div class="latest-episodes__body">
+          <ul class="latest-episodes__list">
+            <li class="latest-episodes__item">
+              <div class="episode">
+                <img
+                src="images/episodes/1.png"
+                alt="Episode preview"
+                class="episode__image"
+                width="390" height="465" loading="lazy"
+                >
+                <div class="episode__info">
+                  <div class="episode__genre">
+                    <span>Gear</span>
+                  </div>
+                  <div class="episode__number">
+                    <span>Episode 3</span>
+                  </div>
+                  <h3 class="episode__title h2">Should you get outboard audio gear?</h3>
+                  <div class="episode__description">
+                    <p>Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here’s our reasons on why you might want to consider picking something up.</p>
+                  </div>
+                  <a href="/" class="episode__button btn">
+                    View Episode Details
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="latest-episodes__item">
+              <div class="episode">
+                <img
+                src="images/episodes/2.png"
+                alt="Episode preview"
+                class="episode__image"
+                width="390" height="465" loading="lazy"
+                >
+                <div class="episode__info">
+                  <div class="episode__genre">
+                    <span>Tips & Tricks</span>
+                  </div>
+                  <div class="episode__number">
+                    <span>Episode 2</span>
+                  </div>
+                  <h3 class="episode__title h2">Mic tricks to take you to the next level</h3>
+                  <div class="episode__description">
+                    <p>Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.</p>
+                  </div>
+                  <a href="/" class="episode__button btn">
+                    View Episode Details
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="latest-episodes__item">
+              <div class="episode">
+                <img
+                src="images/episodes/3.png"
+                alt="Episode preview"
+                class="episode__image"
+                width="390" height="465" loading="lazy"
+                >
+                <div class="episode__info">
+                  <div class="episode__genre">
+                    <span>Gear</span>
+                  </div>
+                  <div class="episode__number">
+                    <span>Episode 1</span>
+                  </div>
+                  <h3 class="episode__title h2">The best microphone under $200</h3>
+                  <div class="episode__description">
+                    <p>With so many microphones on the market, how are you supposed to know what’s the best? Take a look at our top picks.</p>
+                  </div>
+                  <a href="/" class="episode__button btn">
+                    View Episode Details
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="person container container section" aria-labelledby="person-title">
+      <div class="section__title"></div>
+      <div class="section__body">
+        <div class="person__body">
+          <img
+          src="images/person/person.png"
+          alt=""
+          class="person__image"
+          width="650" height="743" loading="lazy"
+          >
+          <div class="person__info">
+            <img
+            src="icons/arrow.png"
+            alt=""
+            class="person__arrow-icon"
+            width="112" height="112" loading="lazy"
+            >
+            <div class="person__subtitle">
+              <p>Meet your host</p>
+            </div>
+            <h3 class="person__title h2" id="person-title">Jacob Paulaner</h3>
+            <div class="person__description">
+              <p>Jacob has a background in audio engineering, and has been podcasting since the early days.</p>
+            </div>
+            <div class="person__description">
+              <p>He’s here to help you level up your game by sharing everything he’s learned along the way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter container section" aria-labelledby="newsletter-title">
+      <div class="section__header"></div>
+      <div class="section__body">
+        <div class="newsletter__body decoration decoration--left-bottom">
+          <div class="newsletter__info">
+            <div class="newsletter__subtitle">
+              <p id="newsletter-subtitle">Email Newsletter</p>
+            </div>
+            <h3 class="newsletter__title h1" id="newsletter-title">Subscribe for updates</h3>
+          </div>
+          <form class="newsletter__form" aria-labelledby="newsletter-title newsletter-subtitle">
+            <div class="newsletter__input-wrapper">
+              <label for="name-input" class="visually-hidden">Your Name</label>
+              <input id="name-input" type="text" class="newsletter__input" placeholder="Name" aria-required="false"
+              autocomplete="name">
+            </div>
+            <div class="newsletter__input-wrapper">
+              <label for="email-input" class="visually-hidden">Your Email</label>
+              <input type="email" class="newsletter__input" placeholder="Email" id="email-input" aria-required="true"
+              autocomplete="email"
+              required>
+            </div>
+            <button class="newsletter__button btn" type="submit">
+              <span>Submit</span>
+              <span class="visually-hidden"> newsletter form</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="reviews container section">
+      <div class="section__header"></div>
+      <div class="section__body">
+        <div class="reviews__body">
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">I can’t recommend this podcast enough</h3>
+            <div class="review__author">
+              <p>Betty Lacey</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">Jacob is the best in the business</h3>
+            <div class="review__author">
+              <p>Adam Driver</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">A wealth of audio knowledge</h3>
+            <div class="review__author">
+              <p>Marcus Brown</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">Every episode is a gem!</h3>
+            <div class="review__author">
+              <p>Jessica Knowl</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">Whoa whoa, let me take some notes!</h3>
+            <div class="review__author">
+              <p>Scott Adams</p>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__stars">
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+              <img 
+                src="icons/star.svg"
+                alt=""
+                class="review__star"
+                width="17" height="17" loading="lazy"
+              >
+            </div>
+            <h3 class="review__text">I’ve upped my game considerably since I started listening</h3>
+            <div class="review__author">
+              <p>Steven Blast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="Castaway - вернуться на главную">
+          <img src="images/logo.svg" alt="Castaway" class="footer__logo-image" height="33" width="160">
+          <span class="visually-hidden">Вернуться на главную</span>
+        </a>
+        <div class="footer__brand-soc1als" aria-label="Социальные сети">
+          <ul class="footer__soc1al-list" role="list">
+            <li class="footer__soc1al-item" role="listitem">
+              <a href="/" class="footer__brand-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img 
+                  src="icons/inst.svg"
+                  alt=""
+                  class="footer__brand-image"
+                  width="25" height="25" loading="lazy"
+                  >
+              </a>
+            </li>
+            <li class="footer__soc1al-item" role="listitem">
+              <a href="/" class="footer__brand-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <img 
+                  src="icons/twitter.svg"
+                  alt=""
+                  class="footer__brand-image"
+                  width="25" height="25" loading="lazy"
+                >
+              </a>
+            </li>
+            <li class="footer__soc1al-item" role="listitem">
+              <a href="/" class="footer__brand-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img 
+                  src="icons/facebook.svg"
+                  alt=""
+                  class="footer__brand-image"
+                  width="25" height="25" loading="lazy"
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__other">
+        <div class="footer__navigation">
+          <nav class="footer__navigation-1" aria-label="Основная навигация">
+            <h2 class="visually-hidden">Основные разделы</h2>
+            <ul class="footer__list" role="list">
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Home</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">About</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Episodes</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__navigation-2" aria-label="Дополнительная информация">
+            <h2 class="visually-hidden">Документация и ресурсы</h2>
+            <ul class="footer__list" role="list">
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Style Guide</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Instructions</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Changelog</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Credit</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Powered by Webflow</a>
+              </li>
+              <li class="footer__item" role="listitem">
+                <a href="/" class="footer__link">Licenses</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__soc1als" aria-label="Платформы для прослушивания">
+          <h2 class="visually-hidden">Слушайте на платформах</h2>
+          <ul class="footer__soc1als-icons" role="list">
+            <li role="listitem">
+              <a href="/" class="footer__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                <img src="icons/spotify.svg" alt="" class="footer__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li role="listitem">
+              <a href="/" class="footer__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Pocket Casts">
+                <img src="icons/2.svg" alt="" class="footer__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li role="listitem">
+              <a href="/" class="footer__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Soundcloud">
+                <img src="icons/soundcloud.svg" alt="" class="footer__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li role="listitem">
+              <a href="/" class="footer__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts">
+                <img src="icons/4.svg" alt="" class="footer__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+            <li role="listitem">
+              <a href="/" class="footer__soc1als-link" target="_blank" rel="noopener noreferrer" aria-label="Overcast">
+                <img src="icons/5.svg" alt="" class="footer__soc1als-icon" width="32" height="32">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

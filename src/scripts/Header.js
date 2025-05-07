@@ -17,7 +17,14 @@ class Header {
     }
 
     onBurgerButtonClick = () => {
+        this.isMenuOpen = !this.isMenuOpen;
+
         this.overlayElement.classList.toggle(this.stateClasses.isActive);
+
+        this.burgerButtonElement.setAttribute('aria-expanded', this.isMenuOpen);
+        this.overlayElement.setAttribute('aria-hidden', !this.isMenuOpen);
+
+        
     }
 
     bindEvents() {

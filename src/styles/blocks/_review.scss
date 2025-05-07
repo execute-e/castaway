@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.review {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    border-radius: rem(20);
+    background-color: var(--color-dark);
+    padding: rem(50);
+
+    @include tablet {
+        padding: rem(25);
+    }
+
+    &__stars {
+        display: flex;
+        column-gap: rem(5);
+    }
+}
