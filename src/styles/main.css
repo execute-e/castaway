@@ -586,14 +586,14 @@ svg * {
   }
 }
 .decoration--left-top::after {
-  background: url(../../../../public/icons/decoration.svg) no-repeat;
+  background: url(../../../castaway/public/icons/decoration.svg) no-repeat;
   width: 4.25rem;
   height: 4.625rem;
   left: calc(var(--container-padding-x) - 1.625rem);
   top: -1.625rem;
 }
 .decoration--left-bottom::after {
-  background: url(../../../public/icons/decoration2.svg) no-repeat;
+  background: url(../../../castaway/public/icons/decoration2.svg) no-repeat;
   width: 9.1875rem;
   height: 5.6875rem;
   left: -2.375rem;
